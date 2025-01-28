@@ -16,7 +16,7 @@ class Blockchain(object):
         # hashes a block
         pass
 
-    @@property
+    @property
     def last_block(self):
         # return the last block in the chain
         pass
