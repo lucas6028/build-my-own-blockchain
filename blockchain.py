@@ -3,11 +3,11 @@ class Blockchain(object):
         self.chain = []
         self.current_transactions = []
 
-    def new_block(self):
+    def creater_new_block(self):
         # create a new block and adds it to the chain
         pass
 
-    def new_transaction(self, sender, recipient, amout):
+    def create_new_transaction(self, sender, recipient, amout):
         """
         Creates a new transaction to go into the next mined Block
         :param sender: <str> Address of the sender
