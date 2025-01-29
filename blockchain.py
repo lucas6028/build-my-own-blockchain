@@ -51,10 +51,19 @@ class Blockchain(object):
 
     @staticmethod
     def hash(block):
-        # hashes a block
-        pass
+        """
+        Create a SHA-256 hash of block
+        :param block: <dict> block
+        :return: <str>
+        """
+
+        # we must make sure that the dictionary is ordered,
+        # or we'll have inconsistent hashes
+        block_string = json.dump(block, sort_keys=True).encode()
+        return hashlib.sha256(block_string).hexdigest()
 
     @property
     def last_block(self):
         # return the last block in the chain
         pass
+
