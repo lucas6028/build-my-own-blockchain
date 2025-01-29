@@ -10,9 +10,27 @@ class Blockchain(object):
         # create the genesis block
         self.create_new_block(previous_hash=1, proof=100)
 
-    def create_new_block(self):
-        # create a new block and adds it to the chain
-        pass
+    def create_new_block(self, proof, previous_hash=None):
+        """
+        Create a new block in the Blockchain
+        :param proof: <int> the proof given by the Proof of Word algorithm
+        :param previous_hash: (Optional) <str> Hash of previous block
+        :return: <dict> new block
+        """
+
+        block = {
+            'index': len(self.chain) + 1,
+            'timestamp': time(),
+            'transaction': self.current_transactions,
+            'proof': proof,
+            'previous_hash': previous_hash or self.hash(self.chain[-1]),
+        }
+
+        # reset the current list of transactions
+        self.current_transactions = []
+
+        self.chain.append(block)
+        return block
 
     def create_new_transaction(self, sender, recipient, amout):
         """
