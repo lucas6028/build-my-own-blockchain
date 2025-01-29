@@ -2,6 +2,8 @@
 
 Tutorial URL: [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
 
+## 比特幣介紹
+
 比特幣的技術基於區塊鏈和去中心化網絡的概念，這些技術共同確保了比特幣的安全性、透明性和抗篡改性。以下是比特幣技術的幾個關鍵組成部分：
 
 1. **區塊鏈（Blockchain）**：
