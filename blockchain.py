@@ -7,7 +7,10 @@ class Blockchain(object):
         self.chain = []
         self.current_transactions = []
 
-    def creater_new_block(self):
+        # create the genesis block
+        self.create_new_block(previous_hash=1, proof=100)
+
+    def create_new_block(self):
         # create a new block and adds it to the chain
         pass
 
