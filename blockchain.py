@@ -114,3 +114,11 @@ def mine():
 @app.route('/transactions/new', method=['POST'])
 def new_transaction():
     return "We'll add a new transaction"
+
+@app.route('/chain', methods=['GET'])
+def full_chain():
+    response = {
+        'chain': block.chain,
+        'length': len(blockchain.chain),
+    }
+    return jsonify(response), 200
