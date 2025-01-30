@@ -107,3 +107,7 @@ node_identifier = str(uuid4()).replace('-', '')
 block = Blockchain()
 
 
+@app.route('/mine', methods=['GET'])
+def mine():
+    return "We'll mine a new block!"
+
