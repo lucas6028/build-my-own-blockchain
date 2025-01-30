@@ -59,7 +59,7 @@ class Blockchain(object):
 
         # we must make sure that the dictionary is ordered,
         # or we'll have inconsistent hashes
-        block_string = json.dump(block, sort_keys=True).encode()
+        block_string = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(block_string).hexdigest()
 
     @property
