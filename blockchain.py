@@ -111,3 +111,6 @@ block = Blockchain()
 def mine():
     return "We'll mine a new block!"
 
+@app.route('/transactions/new', method=['POST'])
+def new_transaction():
+    return "We'll add a new transaction"
