@@ -81,4 +81,16 @@ class Blockchain(object):
 
         return proof 
 
+    @staticmethod
+    def valid_proof(last_proof, proof):
+        """
+        Validates the Proof: does hash(last_proof, proof) contain 4 leading zeros?
+        :param last_proof: <int> previous proof
+        :param proof: <int> current proof
+        :return: <bool> true if correct, false if not.
+        """
+
+        guess = f'{last_proof}{proof}'.encode()
+        guess_hash = hashlib.sha256(guess).hexdigest()
+        return guess_hash[:4] == "0000"
 
