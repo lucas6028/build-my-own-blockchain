@@ -111,7 +111,7 @@ block = Blockchain()
 def mine():
     return "We'll mine a new block!"
 
-@app.route('/transactions/new', method=['POST'])
+@app.route('/transactions/new', methods=['POST'])
 def new_transaction():
     return "We'll add a new transaction"
 
@@ -122,3 +122,6 @@ def full_chain():
         'length': len(blockchain.chain),
     }
     return jsonify(response), 200
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
