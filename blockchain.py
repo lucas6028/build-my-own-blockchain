@@ -1,6 +1,9 @@
 import hashlib
 import json
 from time import time
+from uuid import uuid4
+
+from flask import Flask
 
 class Blockchain(object):
     def __init__(self):
@@ -93,4 +96,14 @@ class Blockchain(object):
         guess = f'{last_proof}{proof}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
+
+# instantiate out node
+app = Flask(__name__)
+
+# generate a globally unique address for this node
+node_identifier = str(uuid4()).replace('-', '')
+
+# instantiate the blockchain
+block = Blockchain()
+
 
