@@ -3,6 +3,7 @@ import json
 from textwrap import dedent
 from time import time
 from uuid import uuid4
+from urllib.parse import urlparse
 
 from flask import Flask, jsonify, request
 
@@ -10,6 +11,7 @@ class Blockchain(object):
     def __init__(self):
         self.chain = []
         self.current_transactions = []
+        self.nodes = set()
 
         # create the genesis block
         self.create_new_block(previous_hash=1, proof=100)
@@ -97,6 +99,16 @@ class Blockchain(object):
         guess = f'{last_proof}{proof}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
+
+    def register_node(self, address):
+        """
+        Add a new node to the list of nodes
+        :param address: <str> address of node. Eg. 'http://192.168.0.5:5000'
+        :return: None
+        """
+
+        parsed_url = urlparse(address)
+        self.nodes.add(parsed_url.netloc)
 
 # instantiate out node
 app = Flask(__name__)
