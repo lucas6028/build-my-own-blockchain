@@ -1,5 +1,7 @@
 # Build My Own Blockchain
 
+![alt text](https://github.com/lucas6028/build-my-own-blockchain/blob/main/assets/images/blockchain.webp)
+
 Tutorial URL: [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
 
 ## 比特幣技術基本介紹
