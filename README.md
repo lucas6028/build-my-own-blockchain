@@ -96,3 +96,7 @@ PoS 機制的參與者稱為驗證者（Validators），嘗試獲得獎勵的過
 
 ---
 
+## Reference
+- [ChatGPT](https://chatgpt.com/)
+- [鏈習生](https://chainee.io/what-is-consensus-in-blockchain/)
+
