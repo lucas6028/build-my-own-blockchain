@@ -1,6 +1,6 @@
 # Build My Own Blockchain
 
-![alt text](https://github.com/lucas6028/build-my-own-blockchain/blob/main/assets/images/blockchain.jpg)
+![alt text](https://github.com/lucas6028/build-my-own-blockchain/blob/main/assets/images/blockchain.jfif)
 
 Tutorial URL: [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
 
